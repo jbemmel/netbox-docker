@@ -1,3 +1,13 @@
+# JvB notes
+On some installations, git may be too old and you get an error 'git fetch-pack: expected shallow list'
+
+To resolve ([source](https://github.com/golang/go/issues/38373)):
+```
+yum -y erase git
+yum -y install https://repo.ius.io/ius-release-el7.rpm
+yum -y install git222
+```
+
 # netbox-docker
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/netbox-community/netbox-docker)][github-release]

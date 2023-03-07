@@ -1,5 +1,10 @@
 # netbox-docker
 
+# JvB: populate custom device templates
+```
+docker run -e "NETBOX_URL=http://172.17.0.1:8000/" -e "NETBOX_TOKEN=0123456789abcdef0123456789abcdef01234567" -e "REPO_URL=https://github.com/jbemmel/devicetype-library.git" -e "VENDORS=Nokia" ghcr.io/minitriga/netbox-device-type-library-import
+```
+
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/netbox-community/netbox-docker)][github-release]
 [![GitHub stars](https://img.shields.io/github/stars/netbox-community/netbox-docker)][github-stargazers]
 ![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/netbox-community/netbox-docker)

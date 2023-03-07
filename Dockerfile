@@ -30,11 +30,12 @@ RUN export DEBIAN_FRONTEND=noninteractive \
       wheel
 
 ARG NETBOX_PATH
-COPY ${NETBOX_PATH}/requirements.txt requirements-container.txt /
+COPY ${NETBOX_PATH}/requirements.txt requirements-container.txt requirements-sros-napalm-driver.txt /
 RUN sed -i -e '/psycopg2-binary/d' requirements.txt && \
     /opt/netbox/venv/bin/pip install \
       -r /requirements.txt \
-      -r /requirements-container.txt
+      -r /requirements-container.txt \
+      -r /requirements-sros-napalm-driver.txt
 
 ###
 # Main stage

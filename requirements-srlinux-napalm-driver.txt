@@ -1,0 +1,2 @@
+# Include SR Linux NAPALM driver in Docker image
+git+https://github.com/napalm-automation-community/napalm-srlinux@main#egg=napalm-srlinux

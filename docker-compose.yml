@@ -1,4 +1,5 @@
 version: '3.4'
+
 services:
   netbox: &netbox
     image: netboxcommunity/netbox:${VERSION-v3.4-2.4.0}
@@ -18,6 +19,7 @@ services:
     - ./reports:/etc/netbox/reports:z,ro
     - ./scripts:/etc/netbox/scripts:z,ro
     - netbox-media-files:/opt/netbox/netbox/media:z
+
   netbox-worker:
     <<: *netbox
     depends_on:

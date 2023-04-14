@@ -23,6 +23,7 @@ RUN export DEBIAN_FRONTEND=noninteractive \
       python3-dev \
       python3-pip \
       python3-venv \
+      git \
     && python3 -m venv /opt/netbox/venv \
     && /opt/netbox/venv/bin/python3 -m pip install --upgrade \
       pip \
@@ -35,7 +36,7 @@ RUN sed -i -e '/psycopg2-binary/d' requirements.txt && \
     /opt/netbox/venv/bin/pip install \
       -r /requirements.txt \
       -r /requirements-container.txt \
-      -r /requirements-sros-napalm-driver.txt
+      -r /requirements-srlinux-napalm-driver.txt
 
 ###
 # Main stage
